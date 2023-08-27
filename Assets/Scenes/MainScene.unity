@@ -609,6 +609,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3356373723167008155, guid: b64d6aac8c1ea23428568cce0fe0db13, type: 3}
+      propertyPath: m_Materials.Array.data[4]
+      value: 
+      objectReference: {fileID: 2100000, guid: ab47ab5bf877ea348888455c11f36f03, type: 2}
+    - target: {fileID: 3356373723167008155, guid: b64d6aac8c1ea23428568cce0fe0db13, type: 3}
+      propertyPath: m_Materials.Array.data[5]
+      value: 
+      objectReference: {fileID: 2100000, guid: 570ae575943c86c499b67ec6693b4a90, type: 2}
     - target: {fileID: 3369797425984236603, guid: b64d6aac8c1ea23428568cce0fe0db13, type: 3}
       propertyPath: m_Name
       value: Apartment
