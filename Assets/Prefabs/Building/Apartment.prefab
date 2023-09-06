@@ -246,7 +246,7 @@ GameObject:
   - component: {fileID: 3436052172824004035}
   m_Layer: 0
   m_Name: Apartment
-  m_TagString: Untagged
+  m_TagString: Residence
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
