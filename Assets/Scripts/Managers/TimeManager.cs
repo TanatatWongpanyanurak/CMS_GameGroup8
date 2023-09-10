@@ -5,7 +5,9 @@ using System;
 
 public class TimeManager : MonoBehaviour
 {
+    public static Action onMinutechanged;
     public static Action onHourchanged;
+    public static Action onDaychanged;
     public static Action onMonthchanged;
     public static Action onYearschanged;
 
@@ -17,7 +19,7 @@ public class TimeManager : MonoBehaviour
     public static int month { get; private set; }
     public static int year { get; private set; }
 
-    private float TimeConvertRate = 1.0f;
+    private float TimeConvertRate = 1f;
     private float timer;
 
     // Start is called before the first frame update
@@ -37,12 +39,14 @@ public class TimeManager : MonoBehaviour
         if (timer <= 0)
         {
             // change times
-            minute += 10;
+            minute += 5;
+            onMinutechanged?.Invoke();
             if (minute >= 60)
             {
-                onHourchanged?.Invoke();
+                
                 minute = 0;
                 hour++;
+                onHourchanged?.Invoke();
             }
 
             // change days
