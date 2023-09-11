@@ -44,6 +44,8 @@ public class StructureManager : MonoBehaviour
         {
             gridPlane.SetActive(false);
         }
+
+        CheckLeftClick();
     }
 
     public void BeginNewBuildingPlacement(GameObject prefab)
@@ -60,6 +62,31 @@ public class StructureManager : MonoBehaviour
         buildingCursor = ghostBuilding;
         buildingCursor.SetActive(true);
     }
+    private void PlaceBuilding()
+    {
+        if (buildingCursor.GetComponent<FindBuildingSite>().CanBuild == false)
+            return;
+
+        GameObject structureObj = Instantiate(curBuildingPrefab,
+                                               curCursorPos,
+                                               Quaternion.identity,
+                                               buildingParent.transform);
+
+        Structure s = structureObj.GetComponent<Structure>();
+
+        //Add building in Office
+        //Deduct Money
+    }
+
+    private void CheckLeftClick()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (isConstructing)
+                PlaceBuilding(); //Real Construction
+        }
+    }
+
 }
 
 
