@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b860eb35874c4b45836c8992c3f30c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBuild: 0
+  canBuild: 1
   plane: {fileID: 4519805116103559126}
 --- !u!1001 &5511277116295773750
 PrefabInstance:
