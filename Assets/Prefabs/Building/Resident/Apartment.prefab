@@ -244,6 +244,7 @@ GameObject:
   - component: {fileID: 5441381143812286391}
   - component: {fileID: 1539485901552992839}
   - component: {fileID: 3436052172824004035}
+  - component: {fileID: 4450987926002334716}
   m_Layer: 0
   m_Name: Apartment
   m_TagString: Residence
@@ -311,6 +312,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBuild: 0
   plane: {fileID: 6453918031317708179}
+--- !u!114 &4450987926002334716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3369797425984236603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 507163cfd52e0e1458c87328034f3f1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxPeople: 100
 --- !u!1 &6453918031317708179
 GameObject:
   m_ObjectHideFlags: 0
