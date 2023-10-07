@@ -15,4 +15,16 @@ public class UI : MonoBehaviour
     {
         
     }
+
+    public void showAndHidePanel(GameObject uiPanel)
+    {
+        if (uiPanel.activeSelf)
+        {
+            uiPanel.gameObject.SetActive(false);
+        }
+        else
+        {
+            uiPanel.gameObject.SetActive(true);
+        }
+    }
 }
