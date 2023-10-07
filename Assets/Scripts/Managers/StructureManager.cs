@@ -13,6 +13,7 @@ public class StructureManager : MonoBehaviour
     [SerializeField] private Vector3 curCursorPos;
 
     public GameObject buildingCursor;
+    public GameObject demolishCursor;
     public GameObject gridPlane;
 
     private GameObject ghostBuilding;
@@ -42,8 +43,14 @@ public class StructureManager : MonoBehaviour
         {
             buildingCursor.transform.position = curCursorPos;
             gridPlane.SetActive(true);
-            roatateGhost();
+            rotateGhost();
         }
+        else if (isDemolishing)
+        {
+            demolishCursor.transform.position = curCursorPos;
+            gridPlane.SetActive(true);
+        }
+       
         else //Mode Play
         {
             gridPlane.SetActive(false);
@@ -94,6 +101,12 @@ public class StructureManager : MonoBehaviour
         {
             if (isConstructing)
                 PlaceBuilding(); //Real Construction
+         /*   else if (isDemolishing)
+            {
+                Demolish();
+            }
+            */
+           
         }
     }
     private void CancelStructureMode()
@@ -107,7 +120,7 @@ public class StructureManager : MonoBehaviour
             Destroy(ghostBuilding);
     }
 
-    private void roatateGhost()
+    private void rotateGhost()
     {
 
         if (Input.GetKeyDown(KeyCode.C))
@@ -115,6 +128,27 @@ public class StructureManager : MonoBehaviour
             ghostBuilding.transform.Rotate(0f, 45f, 0f, Space.Self);
         }
     }
+
+   /* private void Demolish()
+    {
+        Structure s = Office.instance.Structures.Find(x => x.transform.position == curCursorPos);
+
+        if (s != null)
+        {
+            Office.instance.RemoveBuilding(s);
+        }
+    }
+   */
+     public void ToggleDemolish() //Map with Demolish Btn
+    {
+        isConstructing = false;
+        isDemolishing = !isDemolishing;
+
+        gridPlane.SetActive(isDemolishing);
+        demolishCursor.SetActive(isDemolishing);
+    } 
+
+
 }
 
 
