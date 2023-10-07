@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 3851675241191685644}
   m_Layer: 0
   m_Name: Road Turn
-  m_TagString: Untagged
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -204,8 +204,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8687700657870449104}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.34, y: 0.29504257, z: -0.21}
-  m_LocalScale: {x: 0.35446218, y: 0.030554691, z: 0.36909738}
+  m_LocalPosition: {x: -0.34, y: 0.29504257, z: -0.13}
+  m_LocalScale: {x: 0.33988845, y: 0.030554691, z: 0.3478824}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4934045405237380940}
