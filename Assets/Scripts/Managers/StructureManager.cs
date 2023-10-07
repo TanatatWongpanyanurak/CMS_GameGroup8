@@ -101,11 +101,11 @@ public class StructureManager : MonoBehaviour
         {
             if (isConstructing)
                 PlaceBuilding(); //Real Construction
-         /*   else if (isDemolishing)
+           else if (isDemolishing)
             {
-                Demolish();
+                Destroy(GameObject.FindWithTag("Residence"));
             }
-            */
+            
            
         }
     }
@@ -129,7 +129,7 @@ public class StructureManager : MonoBehaviour
         }
     }
 
-   /* private void Demolish()
+    private void Demolish()
     {
         Structure s = Office.instance.Structures.Find(x => x.transform.position == curCursorPos);
 
@@ -138,7 +138,7 @@ public class StructureManager : MonoBehaviour
             Office.instance.RemoveBuilding(s);
         }
     }
-   */
+   
      public void ToggleDemolish() //Map with Demolish Btn
     {
         isConstructing = false;

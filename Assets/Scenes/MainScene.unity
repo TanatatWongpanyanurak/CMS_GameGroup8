@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9416,8 +9416,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 596.304, y: -71.242}
-  m_SizeDelta: {x: 1120.449, y: 79.451}
+  m_AnchoredPosition: {x: 569.9094, y: -66.729}
+  m_SizeDelta: {x: 1067.6597, y: 73.246}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1187973575
 MonoBehaviour:
@@ -10226,11 +10226,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1525348738}
         m_TargetAssemblyTypeName: StructureManager, Assembly-CSharp
-        m_MethodName: BeginNewBuildingPlacement
-        m_Mode: 2
+        m_MethodName: ToggleDemolish
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 3369797425984236603, guid: b64d6aac8c1ea23428568cce0fe0db13, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -11699,7 +11699,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 530, y: 0}
+  m_AnchoredPosition: {x: 380, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1493366837
@@ -11953,6 +11953,7 @@ MonoBehaviour:
   buildingParent: {fileID: 81091478}
   curCursorPos: {x: 0, y: 0, z: 0}
   buildingCursor: {fileID: 0}
+  demolishCursor: {fileID: 411498037}
   gridPlane: {fileID: 1645021661}
   _curStructure: {fileID: 0}
   structurePrefab: []
