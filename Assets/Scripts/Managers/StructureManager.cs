@@ -42,6 +42,7 @@ public class StructureManager : MonoBehaviour
         {
             buildingCursor.transform.position = curCursorPos;
             gridPlane.SetActive(true);
+            roatateGhost();
         }
         else //Mode Play
         {
@@ -64,6 +65,8 @@ public class StructureManager : MonoBehaviour
 
         buildingCursor = ghostBuilding;
         buildingCursor.SetActive(true);
+
+
     }
     private void PlaceBuilding()
     {
@@ -75,7 +78,11 @@ public class StructureManager : MonoBehaviour
                                                Quaternion.identity,
                                                buildingParent.transform);
 
+
+        structureObj.transform.rotation = ghostBuilding.transform.rotation ;
+
         Structure s = structureObj.GetComponent<Structure>();
+
 
         //Add building in Office
         //Deduct Money
@@ -98,6 +105,15 @@ public class StructureManager : MonoBehaviour
 
         if (ghostBuilding != null)
             Destroy(ghostBuilding);
+    }
+
+    private void roatateGhost()
+    {
+
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            ghostBuilding.transform.Rotate(0f, 45f, 0f, Space.Self);
+        }
     }
 }
 
